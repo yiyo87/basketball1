@@ -20,10 +20,24 @@ from equipos import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
     path('',views.index),
+
     path('equipos/',views.listadoEquipos),
+    path('jugadores/',views.listadoJugadores),
+    path('partidos/',views.listadoPartidos),
+
     path('agregarequipos/',views.agregarEquipos),
+    path('agregarjugador/',views.agregarJugador),
+    path('agregarpartido/',views.agregarPartido),
+
+    path('eliminarjugador/<int:id>',views.eliminarJugador),
+    path('actualizarjugador/<int:id>',views.actualizarJugador),
+
     path('eliminarEquipos/<int:id>',views.eliminarEquipo),
     path('actualizarEquipos/<int:id>',views.actualizarEquipos),
+
+    path('eliminarpartido/<int:id>',views.eliminarPartido),
+    path('actualizarpartido/<int:id>',views.actualizarPartido),
     
 ]
